@@ -147,6 +147,7 @@ class Professor(models.Model):
 
 
     class Meta:
+        db_table = 'professor'
         verbose_name = "Professor"
         verbose_name_plural = "Professores"
 
@@ -158,6 +159,7 @@ class Componente_Curricular(models.Model):
     nome = models.CharField(max_length=200)
 
     class Meta:
+        db_table = 'componente_curricular'
         verbose_name = "Componente Curricular"
         verbose_name_plural = "Componente Curricular"
 
@@ -168,6 +170,7 @@ class Justificativa(models.Model):
     nome = models.CharField(max_length=200)
 
     class Meta:
+        db_table = 'justificativa'
         verbose_name = "Justificativa"
         verbose_name_plural = "Justificativa"
 
@@ -178,6 +181,7 @@ class Segmento(models.Model):
     nome = models.CharField(max_length=200)
 
     class Meta:
+        db_table = 'segmento'
         verbose_name = "Segmento"
         verbose_name_plural = "Segmento"
 
@@ -188,6 +192,7 @@ class Periodo(models.Model):
     nome = models.CharField(max_length=200)
 
     class Meta:
+        db_table = 'periodo'
         verbose_name = "Período"
         verbose_name_plural = "Período"
 
@@ -200,6 +205,7 @@ class Turma(models.Model):
     periodo = models.ForeignKey(Periodo, on_delete=models.CASCADE)
 
     class Meta:
+        db_table = 'turma'
         verbose_name = "Turma"
         verbose_name_plural = "Turma"
 

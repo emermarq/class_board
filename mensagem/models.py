@@ -22,6 +22,7 @@ class Mensagem(models.Model):
     professores = models.ManyToManyField('home.Professor', blank=True)  # Relacionamento M:N
 
     class Meta:
+        db_table = 'mensagem'
         verbose_name = "Mensagem"
         verbose_name_plural = "Mensagens"
 

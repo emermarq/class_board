@@ -10,6 +10,7 @@ class Professor_Ausente(models.Model):
     justificativa = models.ForeignKey(Justificativa, on_delete=models.CASCADE)
 
     class Meta:
+        db_table = 'professor_ausente'
         verbose_name = "Professor Ausente"
         verbose_name_plural = "Professor Ausente"
 
@@ -24,6 +25,7 @@ class Professor_Substituto(models.Model):
     substituto = models.ForeignKey(Professor, on_delete=models.CASCADE, related_name="Professor_Substituto")
 
     class Meta:
+        db_table = 'professor_substituto'
         verbose_name = "Professor Substituto"
         verbose_name_plural = "Professor Substituto"
 
