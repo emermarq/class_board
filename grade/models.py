@@ -17,4 +17,9 @@ class Grade(models.Model):
     inicio = models.TimeField()
     fim = models.TimeField()
 
+    class Meta:
+        db_table = 'grade'
+        verbose_name = "Grade"
+        verbose_name_plural = "Grades"
+
 # Create your models here.
