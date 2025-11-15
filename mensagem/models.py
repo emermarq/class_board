@@ -18,8 +18,8 @@ class Mensagem(models.Model):
     descricao = models.TextField(verbose_name="Descrição")
     imagem = models.ImageField(upload_to="images/user")
 
-    salas = models.ManyToManyField('home.Sala', blank=True)  # Relacionamento M:N
-    criancas = models.ManyToManyField('home.Crianca', blank=True)  # Relacionamento M:N
+    salas = models.ManyToManyField('home.Turma', blank=True)  # Relacionamento M:N
+    professores = models.ManyToManyField('home.Professor', blank=True)  # Relacionamento M:N
 
     class Meta:
         verbose_name = "Mensagem"
